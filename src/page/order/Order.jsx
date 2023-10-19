@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import AddToCart from "../../components/AddToCart";
+import AddToCart from "../../components/cart/AddToCart";
+import BottomCart from "../../components/cart/BottomCart";
 import { UserContext } from "../../context/UserContext";
 import MenuService from "../../services/menu.service";
 import TokenService from "../../services/token.service";
@@ -57,41 +58,56 @@ const Order = () => {
   };
 
   return (
-    <div className="menus">
-      <h1>Menus</h1>
-      {displayType === "menus" &&
-        menus.map((menu) => (
-          <div className="menu" key={menu.id} onClick={() => handleClick(menu)}>
-            <h2>{menu.name}</h2>
-            <img className="imgMenu" src={menu.imageUrl} alt="" />
-            <p>{menu.price} €</p>
+    <div className="order">
+      {displayType === "menus" && (
+        <div className="mainChoice">
+          <h2>Choississez votre Menu</h2>
+          <div className="choice">
+            {menus.map((menu) => (
+              <div
+                className="menu"
+                key={menu.id}
+                onClick={() => handleClick(menu)}
+              >
+                <h2>{menu.name}</h2>
+                <img className="imgMenu" src={menu.imageUrl} alt="" />
+                <p>{menu.price} €</p>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+      )}
       {displayType === "categories" && (
-        <div className="categories">
-          <h2>Categories</h2>
-          {selectedMenuCategories.map((category) => (
-            <div
-              key={category.id}
-              onClick={() => handleCategoryClick(category)}
-            >
-              <h3>{category.name}</h3>
-            </div>
-          ))}
-          <button onClick={handleBack}>Retour</button>
+        <div className="mainChoice">
+          <h2>Choississez votre Viande</h2>
+          <div className="choice">
+            {selectedMenuCategories.map((category) => (
+              <div
+                key={category.id}
+                onClick={() => handleCategoryClick(category)}
+              >
+                <h3>{category.name}</h3>
+              </div>
+            ))}
+            <button onClick={handleBack}>Retour</button>
+          </div>
         </div>
       )}
       {displayType === "products" && (
-        <div className="products">
+        <div className="mainChoice">
           <h2>Products</h2>
-          {selectedCategoryProducts.map((product) => (
-            <div key={product.id}>
-              <h4>{product.name}</h4>
-            </div>
-          ))}
-          <button onClick={handleBack}>Retour</button>
+          <div className="choice">
+            {selectedCategoryProducts.map((product) => (
+              <div key={product.id}>
+                <h4>{product.name}</h4>
+                <AddToCart product={product} />
+              </div>
+            ))}
+            <button onClick={handleBack}>Retour</button>
+          </div>
         </div>
       )}
+      <BottomCart />
     </div>
   );
 };

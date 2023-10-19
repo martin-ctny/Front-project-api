@@ -6,14 +6,12 @@ import Order from "../page/order/Order";
 
 const MainRouter = () => {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/ordering" element={<Order />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/signin" element={<Signin />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/ordering" element={<Order />} />
+    </Routes>
   );
 };
 
