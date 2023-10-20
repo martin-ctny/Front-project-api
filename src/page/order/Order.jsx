@@ -85,8 +85,15 @@ const Order = () => {
               <div
                 key={category.id}
                 onClick={() => handleCategoryClick(category)}
+                className="menu"
               >
                 <h3>{category.name}</h3>
+                <img
+                  className="imgMenu"
+                  src={formatImageUrl(category.imageUrl)}
+                  alt=""
+                />
+                <p>{category.price} €</p>
               </div>
             ))}
             <button onClick={handleBack}>Retour</button>
@@ -98,8 +105,14 @@ const Order = () => {
           <h2>Products</h2>
           <div className="choice">
             {selectedCategoryProducts.map((product) => (
-              <div key={product.id}>
+              <div key={product.id} className="menu">
                 <h4>{product.name}</h4>
+                <img
+                  className="imgMenu"
+                  src={formatImageUrl(product.imageUrl)}
+                  alt=""
+                />
+                <p>{product.price} €</p>
                 <AddToCart product={product} />
               </div>
             ))}

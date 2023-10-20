@@ -1,46 +1,157 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<div align="center">
+  <h3 align="center">Nest checkout</h3>
 
-## Available Scripts
+  <p align="center">A project carried out by
+<a href="https://github.com/cmoileo">Léo Fézard</a> and    <a href="https://github.com/martin-ctny">Martin Cantonny</a>. 
+    <br />
+    <a href="https://github.com/cmoileo/caisse-en-nest"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/cmoileo/caisse-en-nest">View Demo</a>
+    ·
+    <a href="https://github.com/cmoileo/caisse-en-nest/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/cmoileo/caisse-en-nest/issues">Request Feature</a>
+  </p>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In the context of our school project focused on an API, our goal was to design a fast-food ordering kiosk that revolutionizes the ordering process by providing customers with an efficient, fast, and highly personalized experience.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Objectives
 
-### `npm test`
+- Design a user-friendly and intuitive user interface.
+- Integrate a wide range of menu options to cater to customer needs and preferences.
+- Allow customers to customize their orders by selecting desired ingredients and options.
+- Optimize internal processes to reduce customer wait times.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run build`
+### Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+- ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
+- ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+- ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-### `npm run eject`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- GETTING STARTED -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Back-end Installation
 
-## Learn More
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repo
+   ```sh
+   git clone https://github.com/cmoileo/caisse-en-nest
+   ```
+1. Docker
+   ```sh
+   docker-compose up
+   ```
+1. Migrate Prisma
+   ```sh
+   npx prisma migrate dev
+   ```
+1. Install Yarn packages
+   ```sh
+   yarn install
+   ```
+1. start the project
+   ```sh
+   yarn run start:dev
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Front-end Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/martin-ctny/Front-project-api
+   ```
+1. Install npm packages
+   ```sh
+   npm install
+   ```
+1. start the project
+   ```sh
+   npm start
+   ```
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+Explore our Swagger documentation for detailed information on how to use our API and examples of API calls. Once you start the project, you'll have access to this documentation:
+
+[Swagger Documentation](localhost:3000/api)
+
+The Swagger documentation includes sample requests, data schemas, and comprehensive information on all available API endpoints.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+- [x] API Development
+- [x] Database Configuration
+- [x] Documentation
+- [ ] User Interface Design
+- [ ]Finish the Front-end
+- [ ] Create a 3D Design
+
+See the [open issues](https://github.com/cmoileo/caisse-en-nest) for a full list of proposed features.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Léo Fézard - [@Léo Fezard](https://www.linkedin.com/in/l%C3%A9o-fezard-0b304b21a/) on linkedin - leo.fezard33@gmail.com
+
+Martin Cantonny - [@Martin Cantonny](https://www.linkedin.com/in/martin-cantonny-089506228/) on linkedin - cantonny.martin16@gmail.com
+
+Project Link: [Caisse in Nest](https://github.com/cmoileo/caisse-en-nest)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

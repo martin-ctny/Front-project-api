@@ -4,9 +4,9 @@ const CartContext = createContext({});
 
 const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const orderData = {
-    userName: "John Doe",
+    userName: "",
     description: "",
-    price: "29.99",
+    price: "0",
     isFinished: false,
     adminId: 1,
     userId: 2,

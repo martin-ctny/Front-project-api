@@ -14,7 +14,9 @@ const Main = () => {
   return (
     <div className="home">
       <button onClick={handkleSignup}>S'incrire</button>
-      <button onClick={handlelogin}>se connecter</button>
+      <button className="login" onClick={handlelogin}>
+        se connecter
+      </button>
     </div>
   );
 };

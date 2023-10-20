@@ -10,6 +10,9 @@ const ValidateOrder = () => {
     try {
       OrderService.createOrder(cart).then((response) => {
         console.log("response", response);
+
+        window.location.href =
+          "https://github.com/cmoileo/caisse-en-nest#roadmap";
       });
     } catch (e) {
       console.log(e);
