@@ -1,10 +1,11 @@
-import { MouseEventHandler, useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { MouseEventHandler, useContext, useEffect, useState } from "react";
 import AuthService from "../../../services/auth.user.service";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const { cart, setCart } = useContext(CartContext);
 
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -12,7 +13,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [adresse, setAdresse] = useState("");
 
-  const handleValidate = (e: any) => {
+  const handleValidate = () => {
     console.log("handleValidate");
     const credentials = {
       firstname,
@@ -22,8 +23,14 @@ const Signup = () => {
       adresse,
     };
     try {
-      AuthService.register(credentials).then((res) => {
-        console.log(res);
+      AuthService.register(credentials).then((response) => {
+        console.log("response", response);
+        const updatedCart = {
+          ...cart,
+          userName: response.createdUser.firstName,
+          userId: response.createdUser.id,
+        };
+        setCart(updatedCart);
       });
       navigate("/ordering");
     } catch (e) {
