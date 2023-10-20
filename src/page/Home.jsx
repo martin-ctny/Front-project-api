@@ -1,7 +1,20 @@
+import { useNavigate } from "react-router-dom";
+
 const Main = () => {
+  const navigate = useNavigate();
+
+  const handkleSignup = () => {
+    navigate("/signup");
+  };
+
+  const handlelogin = () => {
+    navigate("/signin");
+  };
+
   return (
-    <div className="d">
-      <h1>hahahhahhaahah</h1>
+    <div className="home">
+      <button onClick={handkleSignup}>S'incrire</button>
+      <button onClick={handlelogin}>se connecter</button>
     </div>
   );
 };
